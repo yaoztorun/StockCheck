@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+    <item
+        android:id="@+id/navAdd"
+        android:title="Add Item"
+        android:icon="@drawable/add"
+
+        />
+    <item
+        android:id="@+id/navHome"
+        android:title="Home"
+        android:icon="@drawable/home"
+        />
+
+
+    <item
+        android:id="@+id/navMinus"
+        android:title="Add &amp; Remove"
+        android:icon="@drawable/remove"
+
+        />
+
+
+
+        />
+
+
+</menu>

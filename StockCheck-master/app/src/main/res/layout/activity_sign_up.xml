@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.activity.SignUpActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="409dp"
+        android:layout_height="729dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ExtraText">
+
+        <ImageView
+            android:id="@+id/imgLogosgnup"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginStart="104dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/stock_check_logo_corrected" />
+
+        <TextView
+            android:id="@+id/txtUsrsgnup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="68dp"
+            android:fontFamily="sans-serif-condensed"
+            android:text="@string/username"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogosgnup" /> />
+
+        <TextView
+            android:id="@+id/txtPswdsgnup1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="68dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="@string/password"
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtUsrsgnup" />
+
+        <TextView
+            android:id="@+id/txtPswdsgnup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="40dp"
+            android:fontFamily="sans-serif-condensed-light"
+            android:text="CONFIRM  \n PASSWORD : "
+            android:textAlignment="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtPswdsgnup1" />
+
+        <EditText
+            android:id="@+id/txtInputUsrsgnup"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="60dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="Username"
+            app:layout_constraintStart_toEndOf="@+id/txtUsrsgnup"
+            app:layout_constraintTop_toBottomOf="@+id/imgLogosgnup" />
+
+        <EditText
+            android:id="@+id/txtInputPswdsgnup1"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="Password"
+            android:inputType="text|textPassword"
+            app:layout_constraintStart_toEndOf="@+id/txtPswdsgnup1"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputUsrsgnup" />
+
+        <EditText
+            android:id="@+id/txtInputPswdsgnup2"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:ems="10"
+            android:fontFamily="sans-serif-light"
+            android:hint="Password"
+            android:inputType="text|textPassword"
+            app:layout_constraintStart_toEndOf="@+id/txtPswdsgnup2"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputPswdsgnup1" />
+
+        <Button
+            android:id="@+id/btnSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="160dp"
+            android:layout_marginTop="64dp"
+            android:backgroundTint="#3F51B5"
+            android:onClick="btnSignUp_clicked"
+            android:text="SIGN UP"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputPswdsgnup2" />
+
+        <TextView
+            android:id="@+id/txtLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="80dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="79dp"
+            android:text="Do you have an account? "
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/txtBtnLogIn"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/txtBtnLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="136dp"
+            android:minHeight="48dp"
+            android:onClick="onTxtBtnLogIn_clicked"
+            android:text="Log In!"
+            android:textColor="#4E66EC"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@+id/txtLogIn"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputPswdsgnup2" />
+
+        <ProgressBar
+            android:id="@+id/pgBarSign"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="180dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputPswdsgnup2" />
+
+        <CheckBox
+            android:id="@+id/cbShow2"
+            android:layout_width="162dp"
+            android:layout_height="29dp"
+            android:layout_marginStart="160dp"
+            android:text="Show Password"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtInputPswdsgnup2" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

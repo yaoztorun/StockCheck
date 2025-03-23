@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">StockCheck</string>
+    <string name="password">PASSWORD :</string>
+    <string name="username">USERNAME :</string>
+    <string name="beverages_name">Beverages</string>
+
+    <string-array name="categories_txt">
+        <item>All Items</item>
+        <item>Beverages</item>
+        <item>Fruits&amp;Veg</item>
+        <item>Meat&amp;Fish</item>
+        <item>Snacks</item>
+        <item>Milk&amp;Dairy</item>
+        <item>IceCream</item>
+        <item>Food</item>
+    </string-array>
+
+
+
+
+    <string-array name="spinner_txt">
+        <item>Beverages</item>
+        <item>Fruit&amp;Veg</item>
+        <item>Meat&amp;Fish</item>
+        <item>Snacks</item>
+        <item>Milk&amp;Dairy</item>
+        <item>IceCream</item>
+        <item>Food</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

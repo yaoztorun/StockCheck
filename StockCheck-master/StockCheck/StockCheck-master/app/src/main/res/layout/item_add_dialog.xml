@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:scrollbars="horizontal"
+    >
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        app:cardBackgroundColor="@color/blueBlack"
+        app:cardElevation="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="600dp"
+            >
+
+            <TextView
+                android:id="@+id/tvAddText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="36dp"
+                android:layout_marginTop="16dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Please enter the product details below..."
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="203dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="38dp"
+                android:ems="10"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:hint="Enter Name..."
+                android:inputType="text"
+                android:textAlignment="viewStart"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/tvNameDia"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddText" />
+
+            <TextView
+                android:id="@+id/tvNameDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="48dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Product's Name:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAddText" />
+
+            <TextView
+                android:id="@+id/tvTypeDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="44dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Product's Type:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameDia" />
+
+
+            <Spinner
+                android:id="@+id/spType"
+                android:layout_width="203dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="24dp"
+                android:background="#FFFFFF"
+                android:entries="@array/spinner_txt"
+                android:spinnerMode="dialog"
+                app:layout_constraintStart_toEndOf="@+id/tvTypeDia"
+                app:layout_constraintTop_toBottomOf="@+id/etName" />
+
+            <TextView
+                android:id="@+id/tvQuantDia"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="42dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Product's Amount:"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvTypeDia" />
+
+            <EditText
+                android:id="@+id/etQuan"
+                android:layout_width="203dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="Enter Quantity..."
+                android:inputType="number"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/tvQuantDia"
+                app:layout_constraintTop_toBottomOf="@+id/spType" />
+
+            <TextView
+                android:id="@+id/tvPurchDia"
+                android:layout_width="158dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="5dp"
+                android:layout_marginTop="30dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Product's Purchase Price"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvQuantDia" />
+
+            <EditText
+                android:id="@+id/etPurch"
+                android:layout_width="203dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="Enter Price..."
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/tvPurchDia"
+                app:layout_constraintTop_toBottomOf="@+id/etQuan" />
+
+            <TextView
+                android:id="@+id/tvSaleDia"
+                android:layout_width="158dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="24dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Product's Sale Price"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvPurchDia" />
+
+            <EditText
+                android:id="@+id/etSale"
+                android:layout_width="203dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="Enter Price..."
+                android:inputType="numberDecimal"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/tvSaleDia"
+                app:layout_constraintTop_toBottomOf="@+id/etPurch" />
+
+            <TextView
+                android:id="@+id/tvDateDia"
+                android:layout_width="158dp"
+                android:layout_height="52dp"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="12dp"
+                android:fontFamily="sans-serif-condensed-medium"
+                android:text="Product's Expiration Date"
+                android:textAlignment="center"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvSaleDia" />
+
+            <EditText
+                android:id="@+id/etDate"
+                android:layout_width="203dp"
+                android:layout_height="47dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:ems="10"
+                android:hint="Enter Date..."
+                android:inputType="date"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF"
+                android:textSize="20sp"
+                app:layout_constraintStart_toEndOf="@+id/tvDateDia"
+                app:layout_constraintTop_toBottomOf="@+id/etSale" />
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="88dp"
+                android:layout_height="53dp"
+                android:layout_marginStart="153dp"
+                android:layout_marginTop="38dp"
+                app:icon="@android:drawable/ic_menu_send"
+                app:iconGravity="top"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvDateDia" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>
